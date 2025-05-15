@@ -14,3 +14,15 @@
 //     throw new Error(`Error fetching from ${url}: ${error}`);
 //   }
 // }
+
+import axios, { AxiosResponse, AxiosError } from "axios";
+
+export async function fetchData<T>(url: string): Promise<T> {
+  try {
+    const response: AxiosResponse<T> = await axios.get<T>(url);
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    throw new Error(`Error fetching from ${url}: ${axiosError}`);
+  }
+}
