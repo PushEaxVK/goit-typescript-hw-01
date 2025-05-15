@@ -22,6 +22,8 @@
 //   password: 'password123'
 // });
 
+export {};
+
 type User = {
   name: string;
   surname: string;

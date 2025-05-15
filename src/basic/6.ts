@@ -20,6 +20,8 @@
 //     email: 'john@example.com'
 // };
 
+export {};
+
 interface User {
   name: string;
   age: number;
@@ -45,3 +47,5 @@ const poly: User = {
   age: 30,
   email: "john@example.com",
 };
+
+console.log(mango, poly);
